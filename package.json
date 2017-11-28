@@ -52,7 +52,7 @@
   "dependencies": {
     "body-parser": "^1.0.0",
     "bunyan": "^1.0.0",
-    "commander": "^2.0.0",
+    "commander": "^2.12.2",
     "express": "^4.16.1"
   },
   "devDependencies": {
