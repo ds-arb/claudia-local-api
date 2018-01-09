@@ -66,8 +66,10 @@ describe('Unit tests for lib/index', function () {
         it('CASE 1: Should make claudia-api-builder request params as expected', function () {
             const getParams = localApi.__get__('getParams');
             const req = {
-                originalUrl: 'http://www.example.com/test?test-value=42',
                 method: 'PATCH',
+                _parsedUrl: {
+                    pathname: '/test'
+                },
                 headers: {
                     'content-type': 'application/json',
                     'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36'
@@ -87,12 +89,13 @@ describe('Unit tests for lib/index', function () {
             };
             const expectedResult = {
                 requestContext: {
-                    resourcePath: req.originalUrl,
+                    resourcePath: req._parsedUrl.pathname,
                     httpMethod: req.method
                 },
                 headers: req.headers,
                 queryStringParameters: req.query,
-                body: req.body
+                body: req.body,
+                pathParameters: {}
             };
 
             const result = getParams(req);
@@ -199,6 +202,9 @@ describe('Unit tests for lib/index', function () {
             };
             const req = {
                 originalUrl: 'http://www.example.com/test?test-value=42',
+                _parsedUrl: {
+                    pathname: '/test'
+                },
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',
@@ -219,12 +225,13 @@ describe('Unit tests for lib/index', function () {
             };
             const expectedParams = {
                 requestContext: {
-                    resourcePath: req.originalUrl,
+                    resourcePath: req._parsedUrl.pathname,
                     httpMethod: req.method
                 },
                 headers: req.headers,
                 queryStringParameters: req.query,
-                body: req.body
+                body: req.body,
+                pathParameters: {}
             };
             const app = {
                 proxyRouter: function (params, controlFlow) {
