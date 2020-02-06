@@ -1,7 +1,7 @@
 {
   "name": "@rushvora/claudia-local-api",
   "description": "Command line utility to launch Express local API for claudia-api-builder. Test drive your lambda functions before deployment",
-  "version": "1.0.8",
+  "version": "1.1.0",
   "homepage": "https://github.com/rushvora/claudia-local-api",
   "author": {
     "name": "Rushabh Vora",
