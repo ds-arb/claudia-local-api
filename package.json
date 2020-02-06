@@ -1,19 +1,18 @@
 {
-  "name": "claudia-local-api",
+  "name": "@rushvora/claudia-local-api",
   "description": "Command line utility to launch Express local API for claudia-api-builder. Test drive your lambda functions before deployment",
   "version": "1.0.8",
-  "homepage": "https://github.com/suddi/claudia-local-api",
+  "homepage": "https://github.com/rushvora/claudia-local-api",
   "author": {
-    "name": "Sudharshan Ravindran",
-    "email": "mail@suddi.io",
-    "url": "https://suddi.io"
+    "name": "Rushabh Vora",
+    "email": "rushvora@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/suddi/claudia-local-api"
+    "url": "https://github.com/rushvora/claudia-local-api"
   },
   "bugs": {
-    "url": "https://github.com/suddi/claudia-local-api/issues"
+    "url": "https://github.com/rushvora/claudia-local-api/issues"
   },
   "files": [
     "bin",
