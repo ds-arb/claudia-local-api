@@ -5,7 +5,7 @@ const path = require('path');
 
 function execute() {
     const potentialPaths = [
-        path.join(process.cwd(), 'node_modules/claudia-local-api/lib'),
+        path.join(process.cwd(), 'node_modules/@rushvora/claudia-local-api/lib'),
         path.join(__dirname, '../lib')
     ];
 
